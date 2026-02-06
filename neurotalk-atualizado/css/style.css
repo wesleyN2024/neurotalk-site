@@ -1,0 +1,349 @@
+/* ===================== */
+/* RESET + BASE */
+/* ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #79ebbf;
+  color: #2f3e46;
+  line-height: 1.7;
+}
+
+/* ===================== */
+/* CABEÇALHO */
+/* ===================== */
+
+
+.topo {
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 80px;
+}
+.logo-texto {
+  height: 80px;
+}
+
+/* ===================== */
+/* BANNER / CONTEÚDO */
+/* ===================== */
+
+.banner {
+  margin-top: 180px;
+  padding: 50px;
+  background-color: white;
+  margin-left: 280px;
+  margin-right: 280px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 60px;
+}
+
+.conteudo {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero h1 {
+  font-family: Ballitar, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: Ballitar, sans-serif;
+}
+
+h2 {
+  font-family: Ballitar, sans-serif;
+}
+
+h3 {
+  font-family: Ballitar, sans-serif;
+}
+
+p {
+  font-family: Altone, sans-serif;
+}
+
+li {
+  font-family: Altone, sans-serif;
+}
+
+.subtitulo {
+  font-size: 18px;
+  color: #6b7f8c;
+  margin-top: 10px;
+}
+
+/* ===================== */
+/* TEXTO */
+/* ===================== */
+
+.conteudo p {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.conteudo h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.conteudo h3 {
+  font-size: 22px;
+  margin: 30px 0 15px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* ===================== */
+/* DESTAQUES */
+/* ===================== */
+
+.destaque {
+  background: linear-gradient(135deg, #cfe3da, #bfd7ed);
+  padding: 60px 30px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 900px;
+}
+
+.destaque h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.destaque p {
+  font-size: 18px;
+}
+
+.destaque strong {
+  display: block;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+/* ===================== */
+/* BLOCOS DE HORÁRIO */
+/* ===================== */
+
+.bloco {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.obs {
+  font-size: 14px;
+  color: #6b7f8c;
+  margin-top: 20px;
+}
+
+/* ===================== */
+/* TABELA */
+/* ===================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+}
+
+th {
+  background: #2f3e46;
+  color: white;
+}
+
+td {
+  background: #ffffff;
+  border-bottom: 1px solid #e6ebef;
+}
+
+/* ===================== */
+/* BOTÃO */
+/* ===================== */
+
+.btn {
+  display: block;
+  width: fit-content;
+  margin: 60px auto;
+  padding: 16px 40px;
+  background: #2f3e46;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #1f2a30;
+  transform: translateY(-3px);
+}
+
+/* ===================== */
+/* CARROSSEL */
+/* ===================== */
+
+.carrossel {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.swiper {
+  max-width: 700px;
+  height: 460px;
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================== */
+/* CARD FLIP */
+/* ===================== */
+
+.card {
+  width: 280px;
+  height: 380px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background: #2f3e46;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+/* ===================== */
+/* WHATS FLOAT */
+/* ===================== */
+
+.whats-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===================== */
+/* RESPONSIVO */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .swiper {
+    height: 380px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+
+@font-face {
+  font-family: 'Ballitar';
+  src: url('/fonts/Ballitar\ City.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Louis';
+  src: url('/fonts/Louis\ George\ Cafe.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
