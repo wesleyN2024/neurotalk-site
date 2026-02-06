@@ -311,28 +311,121 @@ td {
 }
 
 /* ===================== */
-/* RESPONSIVO */
+/* RESPONSIVO COMPLETO */
 /* ===================== */
 
-@media (max-width: 768px) {
-  .topo {
-    flex-direction: column;
-    gap: 15px;
+/* NOTEBOOK PEQUENO */
+@media (max-width: 1200px) {
+  .banner {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 40px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .banner {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 30px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 34px;
+  }
+
+  .conteudo h2 {
+    font-size: 26px;
+  }
+
+  .destaque {
+    padding: 40px 20px;
   }
 
   .swiper {
+    max-width: 90%;
     height: 380px;
   }
 }
 
+/* CELULAR */
+@media (max-width: 576px) {
+  .topo {
+    padding: 8px;
+  }
+
+  .logo,
+  .logo-texto {
+    height: 55px;
+  }
+
+  .banner {
+    margin: 140px 15px 40px 15px;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .conteudo p {
+    font-size: 15px;
+  }
+
+  .conteudo h2 {
+    font-size: 22px;
+  }
+
+  .conteudo h3 {
+    font-size: 18px;
+  }
+
+  .destaque h2 {
+    font-size: 24px;
+  }
+
+  .destaque p {
+    font-size: 15px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .swiper {
+    height: 320px;
+  }
+
+  .card {
+    width: 220px;
+    height: 300px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}
+
+
 a {
   text-decoration: none;
 }
-
 
 @font-face {
   font-family: 'Ballitar';
@@ -346,4 +439,5 @@ a {
   src: url('/fonts/Louis\ George\ Cafe.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+
 }
