@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/contato.css">
+    <title>Contato Neurotalk</title>
+</head>
+
+<body>
+
+    <header class="topo">
+        <a href="index.html">
+            <img src="img/logo neurotalk oficial.jpeg" class="logo">
+            <img src="img/logo neurotalk texto.jpeg" class="logo-texto">
+        </a>
+    </header>
+
+    <section class="banner">
+        <div class="meios">
+            <a href="https://www.instagram.com/engneurotalk/" target="_blank">
+                <h1 class="contato-insta"><img src="img/Instagram.png" alt="" class="insta-icon"> Instagram</h1>
+            </a>
+            <a href="#" onclick="abrirEscolha(event)">
+                <h1 class="contato-whats">
+                    <img src="img/whatsapp.png" class="whats-icon">
+                    Whatsapp
+                </h1>
+            </a>
+
+            <!-- JANELA -->
+            <div id="modal-whats" class="modal">
+                <div class="modal-conteudo">
+
+                    <h2>Escolha o contato:</h2>
+
+                    <a href="https://wa.me/5583996022005" target="_blank">
+                        Josemary
+                    </a>
+                    <a href="https://wa.me/5583999391862" target="_blank">
+                        Heloisa
+                    </a>
+
+
+
+                    <button class="botao-fechar" onclick="fecharEscolha()">Fechar</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+
+</html>
