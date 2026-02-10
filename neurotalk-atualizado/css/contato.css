@@ -1,0 +1,242 @@
+/* ===================== */
+/* RESET + BASE */
+/* ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #79ebbf;
+  color: #2f3e46;
+  line-height: 1.7;
+}
+
+
+/* ===================== */
+/* CABEÇALHO */
+/* ===================== */
+
+
+.topo {
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 80px;
+}
+
+.logo-texto {
+  height: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.banner {
+  margin-top: 180px;
+  padding: 50px;
+  background-color: white;
+  margin-left: 480px;
+  margin-right: 480px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 60px;
+}
+
+.contato-insta {
+  display: flex;
+  align-items: center;
+  font-family: Ballitar, sans-serif;
+  font-size: 50px;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.contato-insta:hover {
+  transform: scale(1.08);
+}
+
+.insta-icon {
+  width: 100px; /* ajuste como quiser */
+  height: auto;
+}
+
+.contato-whats {
+  display: flex;
+  align-items: center;
+  font-family: Ballitar, sans-serif;
+  font-size: 50px;
+  gap: 10px;
+
+  transition: transform 0.2s ease;
+}
+
+.contato-whats:hover {
+  transform: scale(1.08);
+}
+
+.whats-icon {
+  width: 150px; /* ajuste como quiser */
+  height: auto;
+}
+
+.meios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-conteudo a {
+  background: #25d366;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.modal-conteudo button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.botao-fechar {
+  background: #2f2f2f;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Ballitar';
+  src: url('/fonts/Ballitar\ City.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Louis';
+  src: url('/fonts/Louis\ George\ Cafe.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+
+}
+
+/* ===================== */
+/* RESPONSIVO COMPLETO */
+/* ===================== */
+
+/* NOTEBOOK PEQUENO */
+@media (max-width: 1200px) {
+
+  .banner {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 40px;
+  }
+
+}
+
+
+/* TABLET */
+@media (max-width: 992px) {
+
+  .banner {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 30px;
+  }
+
+  .contato-insta,
+  .contato-whats {
+    font-size: 36px;
+  }
+
+  .insta-icon {
+    width: 80px;
+  }
+
+  .whats-icon {
+    width: 100px;
+  }
+
+}
+
+
+/* CELULAR */
+@media (max-width: 576px) {
+
+  /* cabeçalho */
+
+  .topo {
+    padding: 8px;
+  }
+
+  .logo,
+  .logo-texto {
+    height: 55px;
+  }
+
+
+  /* banner */
+
+  .banner {
+    margin: 140px 15px 40px 15px;
+    padding: 20px;
+  }
+
+
+  /* contatos */
+
+  .meios {
+    gap: 20px;
+  }
+
+  .contato-insta,
+  .contato-whats {
+    font-size: 26px;
+    gap: 8px;
+  }
+
+  .insta-icon {
+    width: 45px;
+  }
+
+  .whats-icon {
+    width: 60px;
+  }
+
+}
