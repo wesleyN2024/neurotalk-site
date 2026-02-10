@@ -222,6 +222,10 @@ td {
 /* CARROSSEL */
 /* ===================== */
 
+.instagram {
+  height: 15px;
+}
+
 .carrossel {
   padding: 80px 0;
   background: #ffffff;
@@ -441,3 +445,4 @@ a {
   font-style: normal;
 
 }
+
