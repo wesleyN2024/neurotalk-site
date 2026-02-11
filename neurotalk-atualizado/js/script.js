@@ -40,3 +40,13 @@ document.querySelectorAll(".card").forEach(card => {
     card.classList.toggle("flip");
   });
 });
+
+// JANELA
+function abrirEscolha(event) {
+  event.preventDefault();
+  document.getElementById("modal-whats").style.display = "flex";
+}
+
+function fecharEscolha() {
+  document.getElementById("modal-whats").style.display = "none";
+}
