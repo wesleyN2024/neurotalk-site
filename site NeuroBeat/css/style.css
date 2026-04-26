@@ -1,0 +1,1060 @@
+/* ========================================= */
+/* RESET GERAL                               */
+/* ========================================= */
+/* Remove margens e espaçamentos padrão
+   de todos os elementos e aplica o cálculo
+   de caixa mais previsível. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================= */
+/* VARIÁVEIS GLOBAIS                         */
+/* ========================================= */
+/* Define as cores principais, sombras
+   e raio padrão usados em todo o site. */
+:root {
+  --fundo: #f7fbff;
+  --branco: #ffffff;
+  --azul-escuro: #163a63;
+  --azul: #2f77c7;
+  --azul-claro: #e8f4ff;
+  --verde: #35b78d;
+  --verde-claro: #dcf8ee;
+  --amarelo: #ffd86b;
+  --rosa: #ffd0db;
+  --texto: #24374a;
+  --texto-suave: #607285;
+  --borda: rgba(22, 58, 99, 0.10);
+  --sombra: 0 20px 50px rgba(19, 51, 87, 0.10);
+  --raio: 24px;
+}
+
+/* ========================================= */
+/* CONFIGURAÇÕES GERAIS DA PÁGINA            */
+/* ========================================= */
+/* Ativa rolagem suave ao clicar em links
+   internos do site. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Define a fonte principal, cor de fundo,
+   cor padrão do texto e evita rolagem
+   horizontal indevida. */
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container centralizador principal.
+   Limita a largura máxima e mantém
+   espaçamento lateral proporcional. */
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* ========================================= */
+/* TOPO / CABEÇALHO                          */
+/* ========================================= */
+/* Cabeçalho fixo no topo com leve transparência
+   e desfoque no fundo. */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(22, 58, 99, 0.08);
+}
+
+/* Estrutura principal do cabeçalho.
+   Também recebeu position: relative
+   para o menu mobile abrir corretamente
+   em relação a esta área. */
+.nav {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+/* Área clicável da marca/logo. */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* Ícone principal da marca. */
+.logo-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--azul) 0%, var(--verde) 100%);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: var(--sombra);
+}
+
+/* Bloco de textos do logo. */
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nome principal da marca. */
+.logo-texto strong {
+  color: var(--azul-escuro);
+  font-size: 1.05rem;
+}
+
+/* Subtítulo da marca. */
+.logo-texto span {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+/* Menu de navegação na versão desktop. */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Links do menu. */
+.menu a {
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Efeito ao passar o mouse nos links do menu. */
+.menu a:hover {
+  color: var(--azul);
+}
+
+/* Área dos botões do topo. */
+.acoes-topo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Botão de ação do topo. */
+.btn-topo {
+  text-decoration: none;
+  background: var(--azul-claro);
+  color: var(--azul-escuro);
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+/* Efeito hover do botão do topo. */
+.btn-topo:hover {
+  transform: translateY(-2px);
+}
+
+/* Botão do menu mobile.
+   Fica escondido no desktop. */
+.menu-mobile {
+  display: none;
+  border: none;
+  background: var(--azul-claro);
+  color: var(--azul-escuro);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ========================================= */
+/* HERO / BANNER PRINCIPAL                   */
+/* ========================================= */
+/* Seção principal do site com fundo
+   decorativo em degradê e formas suaves. */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 85px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 216, 107, 0.22), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(53, 183, 141, 0.16), transparent 25%),
+    linear-gradient(135deg, #eef8ff 0%, #ffffff 100%);
+}
+
+/* Grade principal do banner:
+   uma coluna de texto e outra visual. */
+.hero-grid {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: center;
+}
+
+/* Título principal do banner. */
+.hero-texto h1 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.08;
+  color: var(--azul-escuro);
+  margin-bottom: 18px;
+}
+
+/* Selo visual acima do título principal. */
+.selo {
+  display: inline-block;
+  background: var(--verde-claro);
+  color: #0c7a5a;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* Subtítulo do banner. */
+.subtitulo {
+  font-size: 1.2rem;
+  color: var(--azul);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Texto descritivo principal. */
+.descricao {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+  max-width: 620px;
+}
+
+/* Área dos botões do banner. */
+.hero-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+/* Estilo base dos botões do site. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 15px 24px;
+  border-radius: 16px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+/* Botão principal com degradê. */
+.btn-primario {
+  background: linear-gradient(135deg, var(--azul) 0%, var(--verde) 100%);
+  color: var(--branco);
+  box-shadow: var(--sombra);
+}
+
+/* Efeito hover do botão principal. */
+.btn-primario:hover {
+  transform: translateY(-3px);
+}
+
+/* Botão secundário claro. */
+.btn-secundario {
+  background: var(--branco);
+  color: var(--azul-escuro);
+  border: 1px solid var(--borda);
+}
+
+/* Efeito hover do botão secundário. */
+.btn-secundario:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra);
+}
+
+/* Pequenos cards abaixo dos botões do hero. */
+.hero-mini-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+/* Card informativo pequeno. */
+.mini-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra);
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+/* Ícone dentro do mini-card. */
+.mini-card i {
+  color: var(--azul);
+}
+
+/* Coluna visual do banner. */
+.hero-visual {
+  position: relative;
+}
+
+/* Painel principal visual do banner.
+   Recebeu width: 100% para se comportar melhor
+   em telas menores. */
+.painel-principal {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--borda);
+  border-radius: 30px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  animation: flutuar 4.5s ease-in-out infinite;
+}
+
+/* Faixa superior decorativa do painel. */
+.painel-topo {
+  display: flex;
+  gap: 8px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(22, 58, 99, 0.08);
+}
+
+/* Bolinhas decorativas do topo do painel. */
+.bolinha {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d6e7f8;
+}
+
+/* Conteúdo interno do painel principal. */
+.painel-conteudo {
+  padding: 34px;
+  text-align: center;
+}
+
+/* Ícone central do painel. */
+.icone-central {
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--azul) 0%, var(--verde) 100%);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: var(--sombra);
+}
+
+/* Título interno do painel. */
+.painel-conteudo h3 {
+  color: var(--azul-escuro);
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+}
+
+/* Texto interno do painel. */
+.painel-conteudo p {
+  color: var(--texto-suave);
+}
+
+/* Ondas musicais decorativas. */
+.ondas-musicais {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+  height: 42px;
+}
+
+/* Barras individuais das ondas musicais. */
+.ondas-musicais span {
+  width: 8px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--azul), var(--verde));
+  animation: pulsarBarra 1.2s infinite ease-in-out;
+}
+
+/* Altura e atraso da primeira barra. */
+.ondas-musicais span:nth-child(1) {
+  height: 18px;
+  animation-delay: 0s;
+}
+
+/* Altura e atraso da segunda barra. */
+.ondas-musicais span:nth-child(2) {
+  height: 34px;
+  animation-delay: 0.2s;
+}
+
+/* Altura e atraso da terceira barra. */
+.ondas-musicais span:nth-child(3) {
+  height: 24px;
+  animation-delay: 0.4s;
+}
+
+/* Cards flutuantes decorativos ao redor do painel. */
+.cartao-flutuante {
+  position: absolute;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra);
+  border-radius: 18px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+/* Ícones dentro dos cards flutuantes. */
+.cartao-flutuante i {
+  color: var(--azul);
+}
+
+/* Posicionamento do primeiro card flutuante. */
+.cartao-1 {
+  top: 40px;
+  right: -20px;
+  animation: subirDescer 3.5s ease-in-out infinite;
+}
+
+/* Posicionamento do segundo card flutuante. */
+.cartao-2 {
+  bottom: 35px;
+  left: -20px;
+  animation: subirDescer 3.5s ease-in-out infinite 1s;
+}
+
+/* Área das notas musicais decorativas do fundo. */
+.hero-notas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Cada nota musical decorativa. */
+.hero-notas span {
+  position: absolute;
+  bottom: -80px;
+  font-size: 2rem;
+  opacity: 0;
+  animation: subirNotas 12s linear infinite;
+}
+
+/* Posições e atrasos das notas musicais. */
+.hero-notas span:nth-child(1) { left: 6%; animation-delay: 0s; color: rgba(47, 119, 199, 0.18); }
+.hero-notas span:nth-child(2) { left: 18%; animation-delay: 2s; color: rgba(53, 183, 141, 0.22); }
+.hero-notas span:nth-child(3) { left: 38%; animation-delay: 4s; color: rgba(255, 208, 219, 0.30); }
+.hero-notas span:nth-child(4) { left: 60%; animation-delay: 1s; color: rgba(47, 119, 199, 0.14); }
+.hero-notas span:nth-child(5) { left: 78%; animation-delay: 5s; color: rgba(53, 183, 141, 0.18); }
+.hero-notas span:nth-child(6) { left: 90%; animation-delay: 3s; color: rgba(255, 216, 107, 0.28); }
+
+/* Blurs decorativos do banner. */
+.hero-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.45;
+  z-index: 1;
+}
+
+/* Primeiro blur decorativo. */
+.blur-1 {
+  width: 220px;
+  height: 220px;
+  background: rgba(53, 183, 141, 0.25);
+  top: 40px;
+  right: 70px;
+}
+
+/* Segundo blur decorativo. */
+.blur-2 {
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 216, 107, 0.28);
+  bottom: 40px;
+  left: 60px;
+}
+
+/* ========================================= */
+/* SEÇÕES GERAIS                             */
+/* ========================================= */
+/* Espaçamento padrão entre seções. */
+.secao {
+  padding: 90px 0;
+}
+
+/* Cabeçalho interno das seções. */
+.cabecalho-secao {
+  margin-bottom: 34px;
+}
+
+/* Centraliza textos de cabeçalhos de seção
+   quando necessário. */
+.cabecalho-secao.central {
+  text-align: center;
+}
+
+/* Pequena legenda/título superior da seção. */
+.legenda-secao {
+  display: inline-block;
+  color: var(--verde);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* Título principal da seção. */
+.cabecalho-secao h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--azul-escuro);
+  margin-bottom: 12px;
+}
+
+/* Texto complementar da seção. */
+.cabecalho-secao p {
+  color: var(--texto-suave);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ========================================= */
+/* SOBRE                                     */
+/* ========================================= */
+/* Grade da seção sobre. */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Blocos com aparência de card que compartilham
+   base visual semelhante. */
+.sobre-card,
+.card-beneficio,
+.card-pilar,
+.publico-card,
+.diferenciais-box,
+.cta-box {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra);
+}
+
+/* Card individual da seção sobre. */
+.sobre-card {
+  border-radius: 22px;
+  padding: 28px;
+  transition: 0.3s ease;
+}
+
+/* Hover do card sobre. */
+.sobre-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Ícone do card sobre. */
+.sobre-card i {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: var(--azul-claro);
+  color: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+/* Título do card sobre. */
+.sobre-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+/* Texto do card sobre. */
+.sobre-card p {
+  color: var(--texto-suave);
+}
+
+/* ========================================= */
+/* BENEFÍCIOS                                */
+/* ========================================= */
+/* Grade dos cards de benefícios. */
+.grid-beneficios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card individual de benefício. */
+.card-beneficio {
+  border-radius: 22px;
+  padding: 26px;
+  transition: 0.3s ease;
+}
+
+/* Hover do card de benefício. */
+.card-beneficio:hover {
+  transform: translateY(-8px);
+}
+
+/* Ícone do card de benefício. */
+.card-beneficio i {
+  font-size: 1.4rem;
+  color: var(--verde);
+  margin-bottom: 16px;
+}
+
+/* Título do benefício. */
+.card-beneficio h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* Texto do benefício. */
+.card-beneficio p {
+  color: var(--texto-suave);
+}
+
+/* ========================================= */
+/* PILARES                                   */
+/* ========================================= */
+/* Fundo especial da seção pilares. */
+.pilares {
+  background: linear-gradient(180deg, #f9fcff 0%, #eef7ff 100%);
+}
+
+/* Grade dos pilares. */
+.grid-pilares {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Card individual de pilar. */
+.card-pilar {
+  border-radius: 24px;
+  padding: 28px;
+  transition: 0.3s ease;
+}
+
+/* Hover do card de pilar. */
+.card-pilar:hover {
+  transform: translateY(-8px);
+}
+
+/* Número decorativo do pilar. */
+.numero {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--azul), var(--verde));
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* Título do pilar. */
+.card-pilar h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+/* Texto do pilar. */
+.card-pilar p {
+  color: var(--texto-suave);
+  margin-bottom: 12px;
+}
+
+/* Lista do pilar. */
+.card-pilar ul {
+  padding-left: 18px;
+  color: var(--texto-suave);
+}
+
+/* ========================================= */
+/* DIFERENCIAIS                              */
+/* ========================================= */
+/* Box principal dos diferenciais. */
+.diferenciais-box {
+  border-radius: 28px;
+  padding: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Item individual dos diferenciais. */
+.item-diferencial {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fbfdff;
+  border: 1px solid rgba(22, 58, 99, 0.06);
+  border-radius: 16px;
+  padding: 16px;
+  font-weight: 600;
+}
+
+/* Ícone do item diferencial. */
+.item-diferencial i {
+  color: var(--verde);
+}
+
+/* ========================================= */
+/* PÚBLICO-ALVO                              */
+/* ========================================= */
+/* Grade da seção público-alvo. */
+.publico-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Texto do bloco esquerdo. */
+.publico-texto p {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+/* Card do público-alvo. */
+.publico-card {
+  border-radius: 26px;
+  padding: 34px;
+  text-align: center;
+}
+
+/* Ícone do card público-alvo. */
+.publico-card i {
+  width: 74px;
+  height: 74px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--azul) 0%, var(--verde) 100%);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 18px;
+}
+
+/* Título do card público-alvo. */
+.publico-card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+/* Texto do card público-alvo. */
+.publico-card p {
+  color: var(--texto-suave);
+}
+
+/* ========================================= */
+/* CTA / CHAMADA FINAL                       */
+/* ========================================= */
+/* Fundo decorativo da seção CTA. */
+.cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at left top, rgba(53, 183, 141, 0.12), transparent 25%),
+    radial-gradient(circle at right bottom, rgba(255, 208, 219, 0.18), transparent 25%);
+}
+
+/* Caixa principal da chamada final. */
+.cta-box {
+  border-radius: 30px;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+/* Título da chamada final. */
+.cta-box h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--azul-escuro);
+  margin-bottom: 14px;
+}
+
+/* Texto da chamada final. */
+.cta-box p {
+  color: var(--texto-suave);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Área dos botões finais. */
+.cta-botoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+/* ========================================= */
+/* RODAPÉ                                    */
+/* ========================================= */
+/* Estilo geral do rodapé. */
+.rodape {
+  background: var(--azul-escuro);
+  color: #dfeaf6;
+  padding: 50px 0 30px;
+}
+
+/* Grade do conteúdo do rodapé. */
+.rodape-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 30px;
+}
+
+/* Títulos do rodapé. */
+.rodape h3,
+.rodape h4 {
+  margin-bottom: 12px;
+}
+
+/* Textos e links do rodapé.
+   O word-break ajuda a evitar estouro
+   visual em telas menores. */
+.rodape p,
+.rodape a {
+  color: #dfeaf6;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+/* Links do rodapé em coluna. */
+.rodape-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ========================================= */
+/* ANIMAÇÃO DE REVELAÇÃO                     */
+/* ========================================= */
+/* Elementos começam invisíveis e deslocados
+   para baixo antes de serem revelados via JS. */
+.revelar {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s ease;
+}
+
+/* Estado ativo da revelação. */
+.revelar.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================= */
+/* KEYFRAMES / ANIMAÇÕES                     */
+/* ========================================= */
+/* Animação das notas musicais subindo. */
+@keyframes subirNotas {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-320px) rotate(10deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-760px) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+/* Flutuação suave do painel principal. */
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Sobe e desce dos cards flutuantes. */
+@keyframes subirDescer {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Pulsação das barras musicais. */
+@keyframes pulsarBarra {
+  0%, 100% { transform: scaleY(0.7); opacity: 0.7; }
+  50% { transform: scaleY(1.2); opacity: 1; }
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE - TABLETS E TELAS MENORES  */
+/* ========================================= */
+@media (max-width: 980px) {
+  /* Empilha as grades em uma coluna
+     para melhorar leitura em telas menores. */
+  .hero-grid,
+  .publico-grid,
+  .sobre-grid,
+  .grid-beneficios,
+  .grid-pilares,
+  .rodape-grid,
+  .diferenciais-box {
+    grid-template-columns: 1fr;
+  }
+
+  /* Menu vira um bloco suspenso no mobile/tablet. */
+  .menu {
+    position: absolute;
+    top: 84px;
+    right: 4%;
+    width: 270px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+    padding: 18px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1001;
+  }
+
+  /* Menu exibido quando ativado pelo JavaScript. */
+  .menu.ativo {
+    display: flex;
+  }
+
+  /* Exibe o botão do menu mobile. */
+  .menu-mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Esconde o botão maior do topo no mobile/tablet. */
+  .btn-topo {
+    display: none;
+  }
+
+  /* Cards flutuantes passam a seguir o fluxo normal
+     para evitar sobreposição em telas menores. */
+  .cartao-1,
+  .cartao-2 {
+    position: static;
+    margin-top: 14px;
+  }
+
+  /* Coluna visual do hero passa a empilhar
+     seus elementos em coluna. */
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Garante melhor ocupação de espaço
+     nas duas colunas do hero. */
+  .hero-texto,
+  .hero-visual {
+    width: 100%;
+  }
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE - CELULARES                */
+/* ========================================= */
+@media (max-width: 640px) {
+  /* Reduz o espaçamento vertical do hero
+     em telas menores. */
+  .hero {
+    padding: 70px 0 65px;
+  }
+
+  /* Reduz o espaçamento padrão das seções. */
+  .secao {
+    padding: 70px 0;
+  }
+
+  /* Botões passam a ficar empilhados no celular. */
+  .hero-botoes,
+  .cta-botoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Botões centralizados e ocupando toda largura
+     disponível em telas pequenas. */
+  .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Reduz o padding dos principais cards
+     para não apertar o conteúdo. */
+  .cta-box,
+  .publico-card,
+  .sobre-card,
+  .card-beneficio,
+  .card-pilar,
+  .diferenciais-box {
+    padding: 24px;
+  }
+
+  /* Empilha os mini-cards do hero. */
+  .hero-mini-info {
+    flex-direction: column;
+  }
+
+  /* Permite quebra melhor da marca
+     em celulares mais estreitos. */
+  .marca {
+    max-width: calc(100% - 60px);
+  }
+
+  /* Ajusta um pouco o texto secundário da logo
+     para caber melhor em telas pequenas. */
+  .logo-texto span {
+    font-size: 0.78rem;
+  }
+}

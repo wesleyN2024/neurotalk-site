@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!-- Define que o documento está em HTML5 -->
+
+<html lang="pt-BR">
+<!-- Início do documento HTML, com idioma definido como português do Brasil -->
+
+<head>
+  <!-- Configurações invisíveis da página -->
+
+  <meta charset="UTF-8" />
+  <!-- Define a codificação de caracteres como UTF-8 para aceitar acentos e caracteres especiais -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Faz o site se adaptar corretamente a celulares, tablets e outros dispositivos -->
+
+  <title>NeuroBeat – Musicalização Neurocognitiva</title>
+  <!-- Título que aparece na aba do navegador -->
+
+  <meta
+    name="description"
+    content="Música que estimula o cérebro, desenvolve habilidades e transforma o aprendizado infantil."
+  />
+  <!-- Descrição da página, usada por navegadores e mecanismos de busca -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Melhora o carregamento das fontes vindas do Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Complementa a conexão antecipada com o servidor de fontes -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Importa a fonte Inter em vários pesos -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <!-- Importa a biblioteca de ícones Font Awesome -->
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Conecta o arquivo CSS externo da página -->
+</head>
+
+<body>
+  <!-- Corpo visível do site -->
+
+  <header class="topo">
+    <!-- Cabeçalho fixo / superior do site -->
+
+    <div class="container nav">
+      <!-- Container centralizador do cabeçalho -->
+
+      <a href="#home" class="marca">
+        <!-- Logo clicável que leva o usuário para o topo/início da página -->
+
+        <div class="logo-icon">
+          <i class="fa-solid fa-music"></i>
+        </div>
+        <!-- Ícone visual da marca -->
+
+        <div class="logo-texto">
+          <!-- Área de texto da marca -->
+
+          <strong>NeuroBeat</strong>
+          <!-- Nome principal da marca -->
+
+          <span>Musicalização Neurocognitiva</span>
+          <!-- Subtítulo da marca -->
+        </div>
+      </a>
+
+      <nav class="menu" id="menu">
+        <!-- Menu principal de navegação -->
+
+        <a href="#home">Início</a>
+        <!-- Link para a seção inicial -->
+
+        <a href="#sobre">Sobre</a>
+        <!-- Link para a seção sobre -->
+
+        <a href="#beneficios">Benefícios</a>
+        <!-- Link para a seção de benefícios -->
+
+        <a href="#pilares">Pilares</a>
+        <!-- Link para a seção de pilares -->
+
+        <a href="#diferenciais">Diferenciais</a>
+        <!-- Link para a seção de diferenciais -->
+
+        <a href="#publico">Público-alvo</a>
+        <!-- Link para a seção de público-alvo -->
+
+        <a href="#contato">Contato</a>
+        <!-- Link para a seção de contato -->
+      </nav>
+
+      <div class="acoes-topo">
+        <!-- Área com botão principal e botão do menu mobile -->
+
+        <a href="#contato" class="btn-topo">Agendar aula</a>
+        <!-- Botão de destaque no topo -->
+
+        <button class="menu-mobile" id="menuMobile" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Botão do menu hambúrguer para telas menores -->
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Conteúdo principal da página -->
+
+    <section class="hero" id="home">
+      <!-- Seção principal/banner inicial do site -->
+
+      <div class="hero-notas">
+        <!-- Notas musicais decorativas animadas no fundo -->
+
+        <span>♪</span>
+        <span>♫</span>
+        <span>♩</span>
+        <span>♬</span>
+        <span>♪</span>
+        <span>♫</span>
+      </div>
+
+      <div class="hero-blur blur-1"></div>
+      <div class="hero-blur blur-2"></div>
+      <!-- Elementos decorativos de fundo com efeito de blur -->
+
+      <div class="container hero-grid">
+        <!-- Container do conteúdo principal dividido em duas colunas -->
+
+        <div class="hero-texto revelar">
+          <!-- Lado textual da área principal -->
+
+          <span class="selo">Neurociência • Música • Desenvolvimento Infantil</span>
+          <!-- Pequeno selo/etiqueta de destaque -->
+
+          <h1>NeuroBeat – Musicalização Neurocognitiva</h1>
+          <!-- Título principal da página -->
+
+          <p class="subtitulo">
+            Música que estimula o cérebro, desenvolve habilidades e transforma o aprendizado infantil.
+          </p>
+          <!-- Subtítulo principal -->
+
+          <p class="descricao">
+            O NeuroBeat é um programa inovador que une música, neurociência e desenvolvimento infantil
+            para estimular atenção, memória, linguagem, coordenação motora, criatividade e socialização
+            de forma lúdica, prazerosa e cientificamente fundamentada.
+          </p>
+          <!-- Texto descritivo do programa -->
+
+          <div class="hero-botoes">
+            <!-- Área dos botões principais do banner -->
+
+            <a href="#sobre" class="btn btn-secundario">Quero saber mais</a>
+            <!-- Botão que leva para a seção sobre -->
+
+            <a href="#contato" class="btn btn-primario">Quero uma aula experimental</a>
+            <!-- Botão principal que leva para a seção de contato -->
+          </div>
+
+          <div class="hero-mini-info">
+            <!-- Pequenos cards de apoio com destaques do programa -->
+
+            <div class="mini-card">
+              <i class="fa-solid fa-brain"></i>
+              <span>Estimulação cognitiva</span>
+            </div>
+
+            <div class="mini-card">
+              <i class="fa-solid fa-music"></i>
+              <span>Aprendizagem musical</span>
+            </div>
+
+            <div class="mini-card">
+              <i class="fa-solid fa-child-reaching"></i>
+              <span>Desenvolvimento global</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual revelar">
+          <!-- Lado visual do banner principal -->
+
+          <div class="painel-principal">
+            <!-- Card visual principal -->
+
+            <div class="painel-topo">
+              <!-- Parte superior decorativa do card -->
+
+              <span class="bolinha"></span>
+              <span class="bolinha"></span>
+              <span class="bolinha"></span>
+            </div>
+
+            <div class="painel-conteudo">
+              <!-- Conteúdo interno do card principal -->
+
+              <div class="icone-central">
+                <i class="fa-solid fa-headphones"></i>
+              </div>
+              <!-- Ícone central do painel -->
+
+              <h3>Aprender com música é aprender com emoção, movimento e conexão.</h3>
+              <!-- Frase de destaque -->
+
+              <p>
+                Uma proposta acolhedora, inclusiva e criativa para potencializar o desenvolvimento infantil.
+              </p>
+              <!-- Texto complementar -->
+
+              <div class="ondas-musicais">
+                <!-- Barras/ondas musicais decorativas animadas -->
+
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cartao-flutuante cartao-1">
+            <!-- Card flutuante decorativo 1 -->
+
+            <i class="fa-solid fa-microphone-lines"></i>
+            <span>Linguagem</span>
+          </div>
+
+          <div class="cartao-flutuante cartao-2">
+            <!-- Card flutuante decorativo 2 -->
+
+            <i class="fa-solid fa-drum"></i>
+            <span>Coordenação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao sobre" id="sobre">
+      <!-- Seção sobre o projeto -->
+
+      <div class="container">
+        <div class="cabecalho-secao central revelar">
+          <!-- Cabeçalho da seção -->
+
+          <span class="legenda-secao">Sobre o NeuroBeat</span>
+          <h2>O que é o NeuroBeat?</h2>
+          <p>
+            Um método de musicalização neurocognitiva baseado em Neurociência, Neuroeducação
+            e estimulação das Funções Executivas.
+          </p>
+        </div>
+
+        <div class="sobre-grid">
+          <!-- Grade com os cards informativos -->
+
+          <div class="sobre-card revelar">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Base científica</h3>
+            <p>
+              O NeuroBeat é fundamentado em princípios científicos que valorizam a música
+              como ferramenta de desenvolvimento cognitivo, emocional e social.
+            </p>
+          </div>
+
+          <div class="sobre-card revelar">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Integração completa</h3>
+            <p>
+              Integra música, movimento, linguagem e interação social para promover o
+              desenvolvimento global da criança de forma divertida e afetiva.
+            </p>
+          </div>
+
+          <div class="sobre-card revelar">
+            <i class="fa-solid fa-heart"></i>
+            <h3>Aprendizagem acolhedora</h3>
+            <p>
+              Cada experiência é pensada para ser prazerosa, inclusiva e significativa,
+              respeitando o tempo e a individualidade de cada criança.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao beneficios" id="beneficios">
+      <!-- Seção de benefícios -->
+
+      <div class="container">
+        <div class="cabecalho-secao central revelar">
+          <span class="legenda-secao">Benefícios para a criança</span>
+          <h2>Benefícios do NeuroBeat</h2>
+          <p>Através da música, estimulamos habilidades essenciais para o desenvolvimento infantil.</p>
+        </div>
+
+        <div class="grid-beneficios">
+          <!-- Grade com os benefícios -->
+
+          <article class="card-beneficio revelar">
+            <i class="fa-solid fa-bullseye"></i>
+            <h3>Atenção e concentração</h3>
+            <p>Atividades musicais que ajudam a manter o foco e ampliar o tempo de atenção.</p>
+          </article>
+
+          <article class="card-beneficio revelar">
+            <i class="fa-solid fa-ear-listen"></i>
+            <h3>Memória auditiva e sequencial</h3>
+            <p>Exercícios sonoros que fortalecem a escuta, a retenção e a organização mental.</p>
+          </article>
+
+          <article class="card-beneficio revelar">
+            <i class="fa-solid fa-person-running"></i>
+            <h3>Coordenação motora</h3>
+            <p>Integração entre corpo e ritmo para estimular movimentos e respostas motoras.</p>
+          </article>
+
+          <article class="card-beneficio revelar">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Linguagem e comunicação</h3>
+            <p>A música favorece expressão verbal, vocabulário, ritmo da fala e interação.</p>
+          </article>
+
+          <article class="card-beneficio revelar">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h3>Criatividade e expressão emocional</h3>
+            <p>Vivências musicais que despertam imaginação, sensibilidade e autonomia.</p>
+          </article>
+
+          <article class="card-beneficio revelar">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <h3>Socialização e interação em grupo</h3>
+            <p>Experiências compartilhadas que fortalecem convivência, escuta e vínculo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao pilares" id="pilares">
+      <!-- Seção dos pilares do método -->
+
+      <div class="container">
+        <div class="cabecalho-secao central revelar">
+          <span class="legenda-secao">Pilares do método</span>
+          <h2>Nossos 4 pilares</h2>
+          <p>Quatro eixos que estruturam a experiência do NeuroBeat.</p>
+        </div>
+
+        <div class="grid-pilares">
+          <!-- Grade dos pilares -->
+
+          <article class="card-pilar revelar">
+            <div class="numero">1</div>
+            <h3>Ritmo e Cérebro</h3>
+            <p>Atividades rítmicas que fortalecem percepção auditiva, organização temporal e atenção.</p>
+            <ul>
+              <li>Batidas rítmicas</li>
+              <li>Palmas</li>
+              <li>Sequências sonoras</li>
+            </ul>
+          </article>
+
+          <article class="card-pilar revelar">
+            <div class="numero">2</div>
+            <h3>Movimento e Psicomotricidade</h3>
+            <p>Integração entre corpo e música para estimular equilíbrio, lateralidade e coordenação motora.</p>
+            <ul>
+              <li>Dança rítmica</li>
+              <li>Circuitos musicais</li>
+              <li>Movimentos guiados</li>
+            </ul>
+          </article>
+
+          <article class="card-pilar revelar">
+            <div class="numero">3</div>
+            <h3>Linguagem Musical</h3>
+            <p>A música como ponte para o desenvolvimento da fala, vocabulário e memória auditiva.</p>
+            <ul>
+              <li>Canto</li>
+              <li>Repetição sonora</li>
+              <li>Histórias musicais</li>
+            </ul>
+          </article>
+
+          <article class="card-pilar revelar">
+            <div class="numero">4</div>
+            <h3>Criatividade Sonora</h3>
+            <p>Exploração livre para desenvolver imaginação, autonomia e expressão emocional.</p>
+            <ul>
+              <li>Improvisação</li>
+              <li>Criação de sons</li>
+              <li>Exploração de instrumentos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao diferenciais" id="diferenciais">
+      <!-- Seção de diferenciais -->
+
+      <div class="container">
+        <div class="cabecalho-secao central revelar">
+          <span class="legenda-secao">Diferenciais</span>
+          <h2>Por que escolher o NeuroBeat?</h2>
+        </div>
+
+        <div class="diferenciais-box revelar">
+          <!-- Lista visual dos diferenciais -->
+
+          <div class="item-diferencial">
+            <i class="fa-solid fa-check"></i>
+            <span>Método baseado em neurociência</span>
+          </div>
+
+          <div class="item-diferencial">
+            <i class="fa-solid fa-check"></i>
+            <span>Aprendizagem lúdica e afetiva</span>
+          </div>
+
+          <div class="item-diferencial">
+            <i class="fa-solid fa-check"></i>
+            <span>Estímulo integral do desenvolvimento infantil</span>
+          </div>
+
+          <div class="item-diferencial">
+            <i class="fa-solid fa-check"></i>
+            <span>Atividades planejadas por especialistas</span>
+          </div>
+
+          <div class="item-diferencial">
+            <i class="fa-solid fa-check"></i>
+            <span>Ambiente acolhedor e inclusivo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao publico" id="publico">
+      <!-- Seção de público-alvo -->
+
+      <div class="container publico-grid">
+        <div class="publico-texto revelar">
+          <span class="legenda-secao">Público-alvo</span>
+          <h2>Para quem é indicado?</h2>
+          <p>
+            O NeuroBeat é indicado para crianças em fase de desenvolvimento infantil,
+            especialmente aquelas que se beneficiam de estímulos multisensoriais para
+            aprendizagem, comunicação e interação social.
+          </p>
+        </div>
+
+        <div class="publico-card revelar">
+          <i class="fa-solid fa-child"></i>
+          <h3>Indicado para o desenvolvimento infantil</h3>
+          <p>
+            Uma proposta pensada para potencializar habilidades, respeitar individualidades
+            e promover vivências significativas por meio da música.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao cta" id="contato">
+      <!-- Seção final de chamada para ação -->
+
+      <div class="container">
+        <div class="cta-box revelar">
+          <span class="legenda-secao">Chamada final</span>
+          <h2>Descubra o poder da música no desenvolvimento infantil</h2>
+          <p>
+            Agende uma vivência e conheça de perto como o NeuroBeat pode transformar o aprendizado da sua criança.
+          </p>
+
+          <div class="cta-botoes">
+            <!-- Botões finais da página -->
+
+            <a
+              href="https://wa.me/5583999999999?text=Ol%C3%A1!%20Tenho%20interesse%20em%20agendar%20uma%20aula%20experimental%20do%20NeuroBeat."
+              target="_blank"
+              class="btn btn-primario"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              Agendar aula experimental
+            </a>
+
+            <a href="#home" class="btn btn-secundario">
+              <i class="fa-solid fa-arrow-up"></i>
+              Voltar ao início
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <!-- Rodapé do site -->
+
+    <div class="container rodape-grid">
+      <!-- Conteúdo do rodapé em colunas -->
+
+      <div>
+        <h3>NeuroBeat</h3>
+        <p>Musicalização Neurocognitiva para transformar o desenvolvimento infantil.</p>
+      </div>
+
+      <div>
+        <h4>Links rápidos</h4>
+        <nav class="rodape-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#pilares">Pilares</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <p>WhatsApp: (83) 99999-9999</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Conecta o arquivo JavaScript externo -->
+</body>
+</html>
